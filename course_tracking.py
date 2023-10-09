@@ -34,7 +34,7 @@ def get_chapter_id(cursor, code, chapter_number):
 def edit_chapter(conn, cursor, code, chapter_number, chapter_name_updated):
     """Updates chapter information"""
     chapter_id = get_chapter_id(cursor, code, chapter_number)
-    cursor.execute("UPDATE ")
+    cursor.execute("UPDATE course_chapters SET chapter_name=? WHERE chapter_i")
 
 
 def main():
