@@ -46,8 +46,8 @@ def create_course_lecture(conn, cursor):
                                course_id INTEGER,
                                lecture_date DATE,
                                description TEXT,
-                               status INTEGER
-                               FOREIGN KEY(course_id) REFERENCES courses(id))''')
+                               status INTEGER,
+                               FOREIGN KEY (course_id) REFERENCES courses(id))''')
     conn.commit()
 
 
@@ -79,7 +79,7 @@ def create_course_tp_table(conn, cursor):
                            tp_number INTEGER,
                            tp_name TEXT,
                            tp_date DATE,
-                           status INTEGER
+                           status INTEGER,
                            FOREIGN KEY(course_id) REFERENCES courses(id))''')
 
     conn.commit()

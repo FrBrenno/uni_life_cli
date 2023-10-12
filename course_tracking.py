@@ -290,7 +290,7 @@ def main():
     add_course_parser.add_argument("semester", type=int, help="Course semester")
     add_course_parser.add_argument("status", type=int, help="Course status")
     add_course_parser.add_argument("weight", type=float, help="Course weight")
-    add_course_parser.set_defaults(func=add_course)
+    add_course_parser.set_defaults(func=add_course, conn=conn, cursor=cursor)
 
     args = parser.parse_args()
 
